@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../utils/serde.dart';
@@ -27,6 +29,13 @@ class CreatePost
     int? languageId, // v0.18.0
     String? customThumbnail, // v0.19.4 (optional)
     String? auth,
+    String? status,
+    String? bid_id,
+    int? rating,
+    String? pickup_location,
+    int? pickup_time,
+    String? dropoff_location,
+    int? dropoff_time,
   }) = _CreatePost;
 
   const CreatePost._();
@@ -87,6 +96,12 @@ class EditPost
     int? languageId, // v0.18.0
     String? customThumbnail, // v0.19.4 (optional)
     String? auth,
+    String? bid_id,
+    int? rating,
+    String? pickup_location,
+    int? pickup_time,
+    String? dropoff_location,
+    int? dropoff_time,
   }) = _EditPost;
 
   const EditPost._();
