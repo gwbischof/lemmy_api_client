@@ -13,15 +13,7 @@ _$GetFederatedInstancesImpl _$$GetFederatedInstancesImplFromJson(
     );
 
 Map<String, dynamic> _$$GetFederatedInstancesImplToJson(
-    _$GetFederatedInstancesImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$GetFederatedInstancesImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+    };

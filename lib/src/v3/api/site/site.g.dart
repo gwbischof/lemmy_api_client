@@ -11,18 +11,10 @@ _$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
     _$CreateSiteImpl(
@@ -93,68 +85,81 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
-  final val = <String, dynamic>{
-    'name': instance.name,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sidebar', instance.sidebar);
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('enable_downvotes', instance.enableDownvotes);
-  writeNotNull('enable_nsfw', instance.enableNsfw);
-  writeNotNull(
-      'community_creation_admin_only', instance.communityCreationAdminOnly);
-  writeNotNull('require_email_verification', instance.requireEmailVerification);
-  writeNotNull('application_question', instance.applicationQuestion);
-  writeNotNull('private_instance', instance.privateInstance);
-  writeNotNull('default_theme', instance.defaultTheme);
-  writeNotNull(
-      'default_post_listing_type', instance.defaultPostListingType?.toJson());
-  writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
-  writeNotNull('legal_information', instance.legalInformation);
-  writeNotNull('application_email_admins', instance.applicationEmailAdmins);
-  writeNotNull('hide_modlog_mod_names', instance.hideModlogModNames);
-  writeNotNull('discussion_languages', instance.discussionLanguages);
-  writeNotNull('slur_filter_regex', instance.slurFilterRegex);
-  writeNotNull('actor_name_max_length', instance.actorNameMaxLength);
-  writeNotNull('rate_limit_message', instance.rateLimitMessage);
-  writeNotNull(
-      'rate_limit_message_per_second', instance.rateLimitMessagePerSecond);
-  writeNotNull('rate_limit_post', instance.rateLimitPost);
-  writeNotNull('rate_limit_post_per_second', instance.rateLimitPostPerSecond);
-  writeNotNull('rate_limit_register', instance.rateLimitRegister);
-  writeNotNull(
-      'rate_limit_register_per_second', instance.rateLimitRegisterPerSecond);
-  writeNotNull('rate_limit_image', instance.rateLimitImage);
-  writeNotNull('rate_limit_image_per_second', instance.rateLimitImagePerSecond);
-  writeNotNull('rate_limit_comment', instance.rateLimitComment);
-  writeNotNull(
-      'rate_limit_comment_per_second', instance.rateLimitCommentPerSecond);
-  writeNotNull('rate_limit_search', instance.rateLimitSearch);
-  writeNotNull(
-      'rate_limit_search_per_second', instance.rateLimitSearchPerSecond);
-  writeNotNull('federation_enabled', instance.federationEnabled);
-  writeNotNull('federation_debug', instance.federationDebug);
-  writeNotNull('federation_worker_count', instance.federationWorkerCount);
-  writeNotNull('captcha_enabled', instance.captchaEnabled);
-  writeNotNull('captcha_difficulty', instance.captchaDifficulty);
-  writeNotNull('allowed_instances', instance.allowedInstances);
-  writeNotNull('blocked_instances', instance.blockedInstances);
-  writeNotNull('taglines', instance.taglines);
-  writeNotNull('registration_mode', instance.registrationMode?.toJson());
-  writeNotNull('content_warning', instance.contentWarning);
-  writeNotNull('default_post_listing_mode', instance.defaultPostListingMode);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      if (instance.sidebar case final value?) 'sidebar': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
+      if (instance.enableNsfw case final value?) 'enable_nsfw': value,
+      if (instance.communityCreationAdminOnly case final value?)
+        'community_creation_admin_only': value,
+      if (instance.requireEmailVerification case final value?)
+        'require_email_verification': value,
+      if (instance.applicationQuestion case final value?)
+        'application_question': value,
+      if (instance.privateInstance case final value?) 'private_instance': value,
+      if (instance.defaultTheme case final value?) 'default_theme': value,
+      if (instance.defaultPostListingType?.toJson() case final value?)
+        'default_post_listing_type': value,
+      if (instance.defaultSortType?.toJson() case final value?)
+        'default_sort_type': value,
+      if (instance.legalInformation case final value?)
+        'legal_information': value,
+      if (instance.applicationEmailAdmins case final value?)
+        'application_email_admins': value,
+      if (instance.hideModlogModNames case final value?)
+        'hide_modlog_mod_names': value,
+      if (instance.discussionLanguages case final value?)
+        'discussion_languages': value,
+      if (instance.slurFilterRegex case final value?)
+        'slur_filter_regex': value,
+      if (instance.actorNameMaxLength case final value?)
+        'actor_name_max_length': value,
+      if (instance.rateLimitMessage case final value?)
+        'rate_limit_message': value,
+      if (instance.rateLimitMessagePerSecond case final value?)
+        'rate_limit_message_per_second': value,
+      if (instance.rateLimitPost case final value?) 'rate_limit_post': value,
+      if (instance.rateLimitPostPerSecond case final value?)
+        'rate_limit_post_per_second': value,
+      if (instance.rateLimitRegister case final value?)
+        'rate_limit_register': value,
+      if (instance.rateLimitRegisterPerSecond case final value?)
+        'rate_limit_register_per_second': value,
+      if (instance.rateLimitImage case final value?) 'rate_limit_image': value,
+      if (instance.rateLimitImagePerSecond case final value?)
+        'rate_limit_image_per_second': value,
+      if (instance.rateLimitComment case final value?)
+        'rate_limit_comment': value,
+      if (instance.rateLimitCommentPerSecond case final value?)
+        'rate_limit_comment_per_second': value,
+      if (instance.rateLimitSearch case final value?)
+        'rate_limit_search': value,
+      if (instance.rateLimitSearchPerSecond case final value?)
+        'rate_limit_search_per_second': value,
+      if (instance.federationEnabled case final value?)
+        'federation_enabled': value,
+      if (instance.federationDebug case final value?) 'federation_debug': value,
+      if (instance.federationWorkerCount case final value?)
+        'federation_worker_count': value,
+      if (instance.captchaEnabled case final value?) 'captcha_enabled': value,
+      if (instance.captchaDifficulty case final value?)
+        'captcha_difficulty': value,
+      if (instance.allowedInstances case final value?)
+        'allowed_instances': value,
+      if (instance.blockedInstances case final value?)
+        'blocked_instances': value,
+      if (instance.taglines case final value?) 'taglines': value,
+      if (instance.registrationMode?.toJson() case final value?)
+        'registration_mode': value,
+      if (instance.contentWarning case final value?) 'content_warning': value,
+      if (instance.defaultPostListingMode case final value?)
+        'default_post_listing_mode': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
     _$EditSiteImpl(
@@ -229,69 +234,84 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('sidebar', instance.sidebar);
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('enable_downvotes', instance.enableDownvotes);
-  writeNotNull('enable_nsfw', instance.enableNsfw);
-  writeNotNull(
-      'community_creation_admin_only', instance.communityCreationAdminOnly);
-  writeNotNull('require_email_verification', instance.requireEmailVerification);
-  writeNotNull('application_question', instance.applicationQuestion);
-  writeNotNull('private_instance', instance.privateInstance);
-  writeNotNull('default_theme', instance.defaultTheme);
-  writeNotNull(
-      'default_post_listing_type', instance.defaultPostListingType?.toJson());
-  writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
-  writeNotNull('legal_information', instance.legalInformation);
-  writeNotNull('application_email_admins', instance.applicationEmailAdmins);
-  writeNotNull('hide_modlog_mod_names', instance.hideModlogModNames);
-  writeNotNull('discussion_languages', instance.discussionLanguages);
-  writeNotNull('slur_filter_regex', instance.slurFilterRegex);
-  writeNotNull('actor_name_max_length', instance.actorNameMaxLength);
-  writeNotNull('rate_limit_message', instance.rateLimitMessage);
-  writeNotNull(
-      'rate_limit_message_per_second', instance.rateLimitMessagePerSecond);
-  writeNotNull('rate_limit_post', instance.rateLimitPost);
-  writeNotNull('rate_limit_post_per_second', instance.rateLimitPostPerSecond);
-  writeNotNull('rate_limit_register', instance.rateLimitRegister);
-  writeNotNull(
-      'rate_limit_register_per_second', instance.rateLimitRegisterPerSecond);
-  writeNotNull('rate_limit_image', instance.rateLimitImage);
-  writeNotNull('rate_limit_image_per_second', instance.rateLimitImagePerSecond);
-  writeNotNull('rate_limit_comment', instance.rateLimitComment);
-  writeNotNull(
-      'rate_limit_comment_per_second', instance.rateLimitCommentPerSecond);
-  writeNotNull('rate_limit_search', instance.rateLimitSearch);
-  writeNotNull(
-      'rate_limit_search_per_second', instance.rateLimitSearchPerSecond);
-  writeNotNull('federation_enabled', instance.federationEnabled);
-  writeNotNull('federation_debug', instance.federationDebug);
-  writeNotNull('federation_worker_count', instance.federationWorkerCount);
-  writeNotNull('captcha_enabled', instance.captchaEnabled);
-  writeNotNull('captcha_difficulty', instance.captchaDifficulty);
-  writeNotNull('allowed_instances', instance.allowedInstances);
-  writeNotNull('blocked_instances', instance.blockedInstances);
-  writeNotNull('blocked_urls', instance.blockedUrls);
-  writeNotNull('taglines', instance.taglines);
-  writeNotNull('registration_mode', instance.registrationMode?.toJson());
-  writeNotNull('reports_email_admins', instance.reportsEmailAdmins);
-  writeNotNull('content_warning', instance.contentWarning);
-  writeNotNull('default_post_listing_mode', instance.defaultPostListingMode);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.sidebar case final value?) 'sidebar': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
+      if (instance.enableNsfw case final value?) 'enable_nsfw': value,
+      if (instance.communityCreationAdminOnly case final value?)
+        'community_creation_admin_only': value,
+      if (instance.requireEmailVerification case final value?)
+        'require_email_verification': value,
+      if (instance.applicationQuestion case final value?)
+        'application_question': value,
+      if (instance.privateInstance case final value?) 'private_instance': value,
+      if (instance.defaultTheme case final value?) 'default_theme': value,
+      if (instance.defaultPostListingType?.toJson() case final value?)
+        'default_post_listing_type': value,
+      if (instance.defaultSortType?.toJson() case final value?)
+        'default_sort_type': value,
+      if (instance.legalInformation case final value?)
+        'legal_information': value,
+      if (instance.applicationEmailAdmins case final value?)
+        'application_email_admins': value,
+      if (instance.hideModlogModNames case final value?)
+        'hide_modlog_mod_names': value,
+      if (instance.discussionLanguages case final value?)
+        'discussion_languages': value,
+      if (instance.slurFilterRegex case final value?)
+        'slur_filter_regex': value,
+      if (instance.actorNameMaxLength case final value?)
+        'actor_name_max_length': value,
+      if (instance.rateLimitMessage case final value?)
+        'rate_limit_message': value,
+      if (instance.rateLimitMessagePerSecond case final value?)
+        'rate_limit_message_per_second': value,
+      if (instance.rateLimitPost case final value?) 'rate_limit_post': value,
+      if (instance.rateLimitPostPerSecond case final value?)
+        'rate_limit_post_per_second': value,
+      if (instance.rateLimitRegister case final value?)
+        'rate_limit_register': value,
+      if (instance.rateLimitRegisterPerSecond case final value?)
+        'rate_limit_register_per_second': value,
+      if (instance.rateLimitImage case final value?) 'rate_limit_image': value,
+      if (instance.rateLimitImagePerSecond case final value?)
+        'rate_limit_image_per_second': value,
+      if (instance.rateLimitComment case final value?)
+        'rate_limit_comment': value,
+      if (instance.rateLimitCommentPerSecond case final value?)
+        'rate_limit_comment_per_second': value,
+      if (instance.rateLimitSearch case final value?)
+        'rate_limit_search': value,
+      if (instance.rateLimitSearchPerSecond case final value?)
+        'rate_limit_search_per_second': value,
+      if (instance.federationEnabled case final value?)
+        'federation_enabled': value,
+      if (instance.federationDebug case final value?) 'federation_debug': value,
+      if (instance.federationWorkerCount case final value?)
+        'federation_worker_count': value,
+      if (instance.captchaEnabled case final value?) 'captcha_enabled': value,
+      if (instance.captchaDifficulty case final value?)
+        'captcha_difficulty': value,
+      if (instance.allowedInstances case final value?)
+        'allowed_instances': value,
+      if (instance.blockedInstances case final value?)
+        'blocked_instances': value,
+      if (instance.blockedUrls case final value?) 'blocked_urls': value,
+      if (instance.taglines case final value?) 'taglines': value,
+      if (instance.registrationMode?.toJson() case final value?)
+        'registration_mode': value,
+      if (instance.reportsEmailAdmins case final value?)
+        'reports_email_admins': value,
+      if (instance.contentWarning case final value?) 'content_warning': value,
+      if (instance.defaultPostListingMode case final value?)
+        'default_post_listing_mode': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$BlockInstanceImpl _$$BlockInstanceImplFromJson(Map<String, dynamic> json) =>
     _$BlockInstanceImpl(
@@ -300,17 +320,9 @@ _$BlockInstanceImpl _$$BlockInstanceImplFromJson(Map<String, dynamic> json) =>
       block: json['block'] as bool,
     );
 
-Map<String, dynamic> _$$BlockInstanceImplToJson(_$BlockInstanceImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  val['instance_id'] = instance.instanceId;
-  val['block'] = instance.block;
-  return val;
-}
+Map<String, dynamic> _$$BlockInstanceImplToJson(_$BlockInstanceImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+      'instance_id': instance.instanceId,
+      'block': instance.block,
+    };

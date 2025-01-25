@@ -43,7 +43,14 @@ mixin _$Post {
   bool get featuredLocal => throw _privateConstructorUsedError; // v0.18.0
   String? get urlContentType =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
-  String? get altText => throw _privateConstructorUsedError;
+  String? get altText =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get bid_id => throw _privateConstructorUsedError;
+  int? get rating => throw _privateConstructorUsedError;
+  String? get pickup_location => throw _privateConstructorUsedError;
+  int? get pickup_time => throw _privateConstructorUsedError;
+  String? get dropoff_location => throw _privateConstructorUsedError;
+  int? get dropoff_time => throw _privateConstructorUsedError;
 
   /// Serializes this Post to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -82,7 +89,13 @@ abstract class $PostCopyWith<$Res> {
       bool featuredCommunity,
       bool featuredLocal,
       String? urlContentType,
-      String? altText});
+      String? altText,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -123,6 +136,12 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -217,6 +236,30 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -251,7 +294,13 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
       bool featuredCommunity,
       bool featuredLocal,
       String? urlContentType,
-      String? altText});
+      String? altText,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -289,6 +338,12 @@ class __$$PostImplCopyWithImpl<$Res>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_$PostImpl(
       id: null == id
@@ -383,6 +438,30 @@ class __$$PostImplCopyWithImpl<$Res>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -414,7 +493,13 @@ class _$PostImpl extends _Post {
       required this.featuredCommunity,
       required this.featuredLocal,
       this.urlContentType,
-      this.altText})
+      this.altText,
+      this.bid_id,
+      this.rating,
+      this.pickup_location,
+      this.pickup_time,
+      this.dropoff_location,
+      this.dropoff_time})
       : super._();
 
   factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
@@ -488,10 +573,23 @@ class _$PostImpl extends _Post {
 // v0.19.4 (optional)
   @override
   final String? altText;
+// v0.19.4 (optional)
+  @override
+  final String? bid_id;
+  @override
+  final int? rating;
+  @override
+  final String? pickup_location;
+  @override
+  final int? pickup_time;
+  @override
+  final String? dropoff_location;
+  @override
+  final int? dropoff_time;
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
   }
 
   @override
@@ -532,7 +630,17 @@ class _$PostImpl extends _Post {
                 other.featuredLocal == featuredLocal) &&
             (identical(other.urlContentType, urlContentType) ||
                 other.urlContentType == urlContentType) &&
-            (identical(other.altText, altText) || other.altText == altText));
+            (identical(other.altText, altText) || other.altText == altText) &&
+            (identical(other.bid_id, bid_id) || other.bid_id == bid_id) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.pickup_location, pickup_location) ||
+                other.pickup_location == pickup_location) &&
+            (identical(other.pickup_time, pickup_time) ||
+                other.pickup_time == pickup_time) &&
+            (identical(other.dropoff_location, dropoff_location) ||
+                other.dropoff_location == dropoff_location) &&
+            (identical(other.dropoff_time, dropoff_time) ||
+                other.dropoff_time == dropoff_time));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -561,7 +669,13 @@ class _$PostImpl extends _Post {
         featuredCommunity,
         featuredLocal,
         urlContentType,
-        altText
+        altText,
+        bid_id,
+        rating,
+        pickup_location,
+        pickup_time,
+        dropoff_location,
+        dropoff_time
       ]);
 
   /// Create a copy of Post
@@ -604,7 +718,13 @@ abstract class _Post extends Post {
       required final bool featuredCommunity,
       required final bool featuredLocal,
       final String? urlContentType,
-      final String? altText}) = _$PostImpl;
+      final String? altText,
+      final String? bid_id,
+      final int? rating,
+      final String? pickup_location,
+      final int? pickup_time,
+      final String? dropoff_location,
+      final int? dropoff_time}) = _$PostImpl;
   const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
@@ -654,7 +774,19 @@ abstract class _Post extends Post {
   @override
   String? get urlContentType; // v0.19.4 (optional)
   @override
-  String? get altText;
+  String? get altText; // v0.19.4 (optional)
+  @override
+  String? get bid_id;
+  @override
+  int? get rating;
+  @override
+  String? get pickup_location;
+  @override
+  int? get pickup_time;
+  @override
+  String? get dropoff_location;
+  @override
+  int? get dropoff_time;
 
   /// Create a copy of Post
   /// with the given fields replaced by the non-null parameter values.

@@ -21,23 +21,15 @@ _$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetModlogImplToJson(_$GetModlogImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('mod_person_id', instance.modPersonId);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('other_person_id', instance.otherPersonId);
-  writeNotNull('post_id', instance.postId);
-  writeNotNull('comment_id', instance.commentId);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetModlogImplToJson(_$GetModlogImpl instance) =>
+    <String, dynamic>{
+      if (instance.modPersonId case final value?) 'mod_person_id': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.type?.toJson() case final value?) 'type_': value,
+      if (instance.otherPersonId case final value?) 'other_person_id': value,
+      if (instance.postId case final value?) 'post_id': value,
+      if (instance.commentId case final value?) 'comment_id': value,
+      if (instance.auth case final value?) 'auth': value,
+    };

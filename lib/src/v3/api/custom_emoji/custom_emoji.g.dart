@@ -19,24 +19,15 @@ _$CreateCustomEmojiImpl _$$CreateCustomEmojiImplFromJson(
     );
 
 Map<String, dynamic> _$$CreateCustomEmojiImplToJson(
-    _$CreateCustomEmojiImpl instance) {
-  final val = <String, dynamic>{
-    'category': instance.category,
-    'shortcode': instance.shortcode,
-    'image_url': instance.imageUrl,
-    'alt_text': instance.altText,
-    'keywords': instance.keywords,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$CreateCustomEmojiImpl instance) =>
+    <String, dynamic>{
+      'category': instance.category,
+      'shortcode': instance.shortcode,
+      'image_url': instance.imageUrl,
+      'alt_text': instance.altText,
+      'keywords': instance.keywords,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$EditCustomEmojiImpl _$$EditCustomEmojiImplFromJson(
         Map<String, dynamic> json) =>
@@ -51,24 +42,15 @@ _$EditCustomEmojiImpl _$$EditCustomEmojiImplFromJson(
     );
 
 Map<String, dynamic> _$$EditCustomEmojiImplToJson(
-    _$EditCustomEmojiImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'category': instance.category,
-    'image_url': instance.imageUrl,
-    'alt_text': instance.altText,
-    'keywords': instance.keywords,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$EditCustomEmojiImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'category': instance.category,
+      'image_url': instance.imageUrl,
+      'alt_text': instance.altText,
+      'keywords': instance.keywords,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$DeleteCustomEmojiImpl _$$DeleteCustomEmojiImplFromJson(
         Map<String, dynamic> json) =>
@@ -78,17 +60,8 @@ _$DeleteCustomEmojiImpl _$$DeleteCustomEmojiImplFromJson(
     );
 
 Map<String, dynamic> _$$DeleteCustomEmojiImplToJson(
-    _$DeleteCustomEmojiImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$DeleteCustomEmojiImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      if (instance.auth case final value?) 'auth': value,
+    };

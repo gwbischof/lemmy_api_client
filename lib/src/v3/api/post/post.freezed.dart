@@ -32,6 +32,13 @@ mixin _$CreatePost {
   String? get customThumbnail =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
+  String? get bid_id => throw _privateConstructorUsedError;
+  int? get rating => throw _privateConstructorUsedError;
+  String? get pickup_location => throw _privateConstructorUsedError;
+  int? get pickup_time => throw _privateConstructorUsedError;
+  String? get dropoff_location => throw _privateConstructorUsedError;
+  int? get dropoff_time => throw _privateConstructorUsedError;
 
   /// Serializes this CreatePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -59,7 +66,14 @@ abstract class $CreatePostCopyWith<$Res> {
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? status,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -87,6 +101,13 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? status = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -129,6 +150,34 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -151,7 +200,14 @@ abstract class _$$CreatePostImplCopyWith<$Res>
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? status,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -177,6 +233,13 @@ class __$$CreatePostImplCopyWithImpl<$Res>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? status = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_$CreatePostImpl(
       name: null == name
@@ -219,6 +282,34 @@ class __$$CreatePostImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -237,7 +328,14 @@ class _$CreatePostImpl extends _CreatePost {
       this.nsfw,
       this.languageId,
       this.customThumbnail,
-      this.auth})
+      this.auth,
+      this.status,
+      this.bid_id,
+      this.rating,
+      this.pickup_location,
+      this.pickup_time,
+      this.dropoff_location,
+      this.dropoff_time})
       : super._();
 
   factory _$CreatePostImpl.fromJson(Map<String, dynamic> json) =>
@@ -272,10 +370,24 @@ class _$CreatePostImpl extends _CreatePost {
 // v0.19.4 (optional)
   @override
   final String? auth;
+  @override
+  final String? status;
+  @override
+  final String? bid_id;
+  @override
+  final int? rating;
+  @override
+  final String? pickup_location;
+  @override
+  final int? pickup_time;
+  @override
+  final String? dropoff_location;
+  @override
+  final int? dropoff_time;
 
   @override
   String toString() {
-    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, altText: $altText, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
+    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, altText: $altText, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, status: $status, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
   }
 
   @override
@@ -296,13 +408,41 @@ class _$CreatePostImpl extends _CreatePost {
                 other.languageId == languageId) &&
             (identical(other.customThumbnail, customThumbnail) ||
                 other.customThumbnail == customThumbnail) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.bid_id, bid_id) || other.bid_id == bid_id) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.pickup_location, pickup_location) ||
+                other.pickup_location == pickup_location) &&
+            (identical(other.pickup_time, pickup_time) ||
+                other.pickup_time == pickup_time) &&
+            (identical(other.dropoff_location, dropoff_location) ||
+                other.dropoff_location == dropoff_location) &&
+            (identical(other.dropoff_time, dropoff_time) ||
+                other.dropoff_time == dropoff_time));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, communityId, url, body,
-      altText, honeypot, nsfw, languageId, customThumbnail, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      communityId,
+      url,
+      body,
+      altText,
+      honeypot,
+      nsfw,
+      languageId,
+      customThumbnail,
+      auth,
+      status,
+      bid_id,
+      rating,
+      pickup_location,
+      pickup_time,
+      dropoff_location,
+      dropoff_time);
 
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
@@ -331,7 +471,14 @@ abstract class _CreatePost extends CreatePost {
       final bool? nsfw,
       final int? languageId,
       final String? customThumbnail,
-      final String? auth}) = _$CreatePostImpl;
+      final String? auth,
+      final String? status,
+      final String? bid_id,
+      final int? rating,
+      final String? pickup_location,
+      final int? pickup_time,
+      final String? dropoff_location,
+      final int? dropoff_time}) = _$CreatePostImpl;
   const _CreatePost._() : super._();
 
   factory _CreatePost.fromJson(Map<String, dynamic> json) =
@@ -357,6 +504,20 @@ abstract class _CreatePost extends CreatePost {
   String? get customThumbnail; // v0.19.4 (optional)
   @override
   String? get auth;
+  @override
+  String? get status;
+  @override
+  String? get bid_id;
+  @override
+  int? get rating;
+  @override
+  String? get pickup_location;
+  @override
+  int? get pickup_time;
+  @override
+  String? get dropoff_location;
+  @override
+  int? get dropoff_time;
 
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
@@ -568,6 +729,12 @@ mixin _$EditPost {
   String? get customThumbnail =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
+  String? get bid_id => throw _privateConstructorUsedError;
+  int? get rating => throw _privateConstructorUsedError;
+  String? get pickup_location => throw _privateConstructorUsedError;
+  int? get pickup_time => throw _privateConstructorUsedError;
+  String? get dropoff_location => throw _privateConstructorUsedError;
+  int? get dropoff_time => throw _privateConstructorUsedError;
 
   /// Serializes this EditPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -593,7 +760,13 @@ abstract class $EditPostCopyWith<$Res> {
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -620,6 +793,12 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_value.copyWith(
       postId: null == postId
@@ -658,6 +837,30 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -679,7 +882,13 @@ abstract class _$$EditPostImplCopyWith<$Res>
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? bid_id,
+      int? rating,
+      String? pickup_location,
+      int? pickup_time,
+      String? dropoff_location,
+      int? dropoff_time});
 }
 
 /// @nodoc
@@ -704,6 +913,12 @@ class __$$EditPostImplCopyWithImpl<$Res>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? bid_id = freezed,
+    Object? rating = freezed,
+    Object? pickup_location = freezed,
+    Object? pickup_time = freezed,
+    Object? dropoff_location = freezed,
+    Object? dropoff_time = freezed,
   }) {
     return _then(_$EditPostImpl(
       postId: null == postId
@@ -742,6 +957,30 @@ class __$$EditPostImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid_id: freezed == bid_id
+          ? _value.bid_id
+          : bid_id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pickup_location: freezed == pickup_location
+          ? _value.pickup_location
+          : pickup_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickup_time: freezed == pickup_time
+          ? _value.pickup_time
+          : pickup_time // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dropoff_location: freezed == dropoff_location
+          ? _value.dropoff_location
+          : dropoff_location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoff_time: freezed == dropoff_time
+          ? _value.dropoff_time
+          : dropoff_time // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -759,7 +998,13 @@ class _$EditPostImpl extends _EditPost {
       this.nsfw,
       this.languageId,
       this.customThumbnail,
-      this.auth})
+      this.auth,
+      this.bid_id,
+      this.rating,
+      this.pickup_location,
+      this.pickup_time,
+      this.dropoff_location,
+      this.dropoff_time})
       : super._();
 
   factory _$EditPostImpl.fromJson(Map<String, dynamic> json) =>
@@ -791,10 +1036,22 @@ class _$EditPostImpl extends _EditPost {
 // v0.19.4 (optional)
   @override
   final String? auth;
+  @override
+  final String? bid_id;
+  @override
+  final int? rating;
+  @override
+  final String? pickup_location;
+  @override
+  final int? pickup_time;
+  @override
+  final String? dropoff_location;
+  @override
+  final int? dropoff_time;
 
   @override
   String toString() {
-    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
+    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
   }
 
   @override
@@ -812,13 +1069,38 @@ class _$EditPostImpl extends _EditPost {
                 other.languageId == languageId) &&
             (identical(other.customThumbnail, customThumbnail) ||
                 other.customThumbnail == customThumbnail) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.bid_id, bid_id) || other.bid_id == bid_id) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.pickup_location, pickup_location) ||
+                other.pickup_location == pickup_location) &&
+            (identical(other.pickup_time, pickup_time) ||
+                other.pickup_time == pickup_time) &&
+            (identical(other.dropoff_location, dropoff_location) ||
+                other.dropoff_location == dropoff_location) &&
+            (identical(other.dropoff_time, dropoff_time) ||
+                other.dropoff_time == dropoff_time));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText,
-      nsfw, languageId, customThumbnail, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      postId,
+      name,
+      url,
+      body,
+      altText,
+      nsfw,
+      languageId,
+      customThumbnail,
+      auth,
+      bid_id,
+      rating,
+      pickup_location,
+      pickup_time,
+      dropoff_location,
+      dropoff_time);
 
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
@@ -846,7 +1128,13 @@ abstract class _EditPost extends EditPost {
       final bool? nsfw,
       final int? languageId,
       final String? customThumbnail,
-      final String? auth}) = _$EditPostImpl;
+      final String? auth,
+      final String? bid_id,
+      final int? rating,
+      final String? pickup_location,
+      final int? pickup_time,
+      final String? dropoff_location,
+      final int? dropoff_time}) = _$EditPostImpl;
   const _EditPost._() : super._();
 
   factory _EditPost.fromJson(Map<String, dynamic> json) =
@@ -870,6 +1158,18 @@ abstract class _EditPost extends EditPost {
   String? get customThumbnail; // v0.19.4 (optional)
   @override
   String? get auth;
+  @override
+  String? get bid_id;
+  @override
+  int? get rating;
+  @override
+  String? get pickup_location;
+  @override
+  int? get pickup_time;
+  @override
+  String? get dropoff_location;
+  @override
+  int? get dropoff_time;
 
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
