@@ -16,24 +16,15 @@ _$CreateCommentImpl _$$CreateCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) {
-  final val = <String, dynamic>{
-    'content': instance.content,
-    'post_id': instance.postId,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('parent_id', instance.parentId);
-  writeNotNull('language_id', instance.languageId);
-  writeNotNull('form_id', instance.formId);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) =>
+    <String, dynamic>{
+      'content': instance.content,
+      'post_id': instance.postId,
+      if (instance.parentId case final value?) 'parent_id': value,
+      if (instance.languageId case final value?) 'language_id': value,
+      if (instance.formId case final value?) 'form_id': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
     _$EditCommentImpl(
@@ -44,23 +35,14 @@ _$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('content', instance.content);
-  writeNotNull('language_id', instance.languageId);
-  writeNotNull('form_id', instance.formId);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      if (instance.content case final value?) 'content': value,
+      if (instance.languageId case final value?) 'language_id': value,
+      if (instance.formId case final value?) 'form_id': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$DeleteCommentImpl _$$DeleteCommentImplFromJson(Map<String, dynamic> json) =>
     _$DeleteCommentImpl(
@@ -69,21 +51,12 @@ _$DeleteCommentImpl _$$DeleteCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$DeleteCommentImplToJson(_$DeleteCommentImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'deleted': instance.deleted,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$DeleteCommentImplToJson(_$DeleteCommentImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'deleted': instance.deleted,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$RemoveCommentImpl _$$RemoveCommentImplFromJson(Map<String, dynamic> json) =>
     _$RemoveCommentImpl(
@@ -93,22 +66,13 @@ _$RemoveCommentImpl _$$RemoveCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'removed': instance.removed,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('reason', instance.reason);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'removed': instance.removed,
+      if (instance.reason case final value?) 'reason': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$MarkCommentReplyAsReadImpl _$$MarkCommentReplyAsReadImplFromJson(
         Map<String, dynamic> json) =>
@@ -119,21 +83,12 @@ _$MarkCommentReplyAsReadImpl _$$MarkCommentReplyAsReadImplFromJson(
     );
 
 Map<String, dynamic> _$$MarkCommentReplyAsReadImplToJson(
-    _$MarkCommentReplyAsReadImpl instance) {
-  final val = <String, dynamic>{
-    'comment_reply_id': instance.commentReplyId,
-    'read': instance.read,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$MarkCommentReplyAsReadImpl instance) =>
+    <String, dynamic>{
+      'comment_reply_id': instance.commentReplyId,
+      'read': instance.read,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreateCommentLikeImpl _$$CreateCommentLikeImplFromJson(
         Map<String, dynamic> json) =>
@@ -144,21 +99,12 @@ _$CreateCommentLikeImpl _$$CreateCommentLikeImplFromJson(
     );
 
 Map<String, dynamic> _$$CreateCommentLikeImplToJson(
-    _$CreateCommentLikeImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'score': instance.score,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$CreateCommentLikeImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'score': instance.score,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$ListCommentLikesImpl _$$ListCommentLikesImplFromJson(
         Map<String, dynamic> json) =>
@@ -170,22 +116,13 @@ _$ListCommentLikesImpl _$$ListCommentLikesImplFromJson(
     );
 
 Map<String, dynamic> _$$ListCommentLikesImplToJson(
-    _$ListCommentLikesImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$ListCommentLikesImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) =>
     _$SaveCommentImpl(
@@ -194,21 +131,12 @@ _$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$SaveCommentImplToJson(_$SaveCommentImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'save': instance.save,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$SaveCommentImplToJson(_$SaveCommentImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'save': instance.save,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$DistinguishCommentImpl _$$DistinguishCommentImplFromJson(
         Map<String, dynamic> json) =>
@@ -219,21 +147,12 @@ _$DistinguishCommentImpl _$$DistinguishCommentImplFromJson(
     );
 
 Map<String, dynamic> _$$DistinguishCommentImplToJson(
-    _$DistinguishCommentImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'distinguished': instance.distinguished,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$DistinguishCommentImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'distinguished': instance.distinguished,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) =>
     _$GetCommentsImpl(
@@ -253,30 +172,22 @@ _$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('max_depth', instance.maxDepth);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('community_name', instance.communityName);
-  writeNotNull('post_id', instance.postId);
-  writeNotNull('parent_id', instance.parentId);
-  writeNotNull('saved_only', instance.savedOnly);
-  writeNotNull('liked_only', instance.likedOnly);
-  writeNotNull('disliked_only', instance.dislikedOnly);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type_': value,
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.maxDepth case final value?) 'max_depth': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.communityName case final value?) 'community_name': value,
+      if (instance.postId case final value?) 'post_id': value,
+      if (instance.parentId case final value?) 'parent_id': value,
+      if (instance.savedOnly case final value?) 'saved_only': value,
+      if (instance.likedOnly case final value?) 'liked_only': value,
+      if (instance.dislikedOnly case final value?) 'disliked_only': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$GetCommentImpl _$$GetCommentImplFromJson(Map<String, dynamic> json) =>
     _$GetCommentImpl(
@@ -284,20 +195,11 @@ _$GetCommentImpl _$$GetCommentImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetCommentImplToJson(_$GetCommentImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetCommentImplToJson(_$GetCommentImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreateCommentReportImpl _$$CreateCommentReportImplFromJson(
         Map<String, dynamic> json) =>
@@ -308,21 +210,12 @@ _$CreateCommentReportImpl _$$CreateCommentReportImplFromJson(
     );
 
 Map<String, dynamic> _$$CreateCommentReportImplToJson(
-    _$CreateCommentReportImpl instance) {
-  final val = <String, dynamic>{
-    'comment_id': instance.commentId,
-    'reason': instance.reason,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$CreateCommentReportImpl instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'reason': instance.reason,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$ResolveCommentReportImpl _$$ResolveCommentReportImplFromJson(
         Map<String, dynamic> json) =>
@@ -333,21 +226,12 @@ _$ResolveCommentReportImpl _$$ResolveCommentReportImplFromJson(
     );
 
 Map<String, dynamic> _$$ResolveCommentReportImplToJson(
-    _$ResolveCommentReportImpl instance) {
-  final val = <String, dynamic>{
-    'report_id': instance.reportId,
-    'resolved': instance.resolved,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$ResolveCommentReportImpl instance) =>
+    <String, dynamic>{
+      'report_id': instance.reportId,
+      'resolved': instance.resolved,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(
         Map<String, dynamic> json) =>
@@ -361,20 +245,12 @@ _$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(
     );
 
 Map<String, dynamic> _$$ListCommentReportsImplToJson(
-    _$ListCommentReportsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('comment_id', instance.commentId);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('unresolved_only', instance.unresolvedOnly);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$ListCommentReportsImpl instance) =>
+    <String, dynamic>{
+      if (instance.commentId case final value?) 'comment_id': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
