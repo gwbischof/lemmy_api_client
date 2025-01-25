@@ -1,4 +1,4 @@
-name: lemmy_api_client
+name: mlemmy_client
 version: 0.21.0
 homepage: https://github.com/LemmurOrg/lemmy_api_client
 description: Future-based http client for the Lemmy API. Provides an easy interface and statically typed responses.
