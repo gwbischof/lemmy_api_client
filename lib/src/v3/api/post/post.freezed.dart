@@ -729,6 +729,7 @@ mixin _$EditPost {
   String? get customThumbnail =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   String? get bid_id => throw _privateConstructorUsedError;
   int? get rating => throw _privateConstructorUsedError;
   String? get pickup_location => throw _privateConstructorUsedError;
@@ -761,6 +762,7 @@ abstract class $EditPostCopyWith<$Res> {
       int? languageId,
       String? customThumbnail,
       String? auth,
+      String? status,
       String? bid_id,
       int? rating,
       String? pickup_location,
@@ -793,6 +795,7 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? status = freezed,
     Object? bid_id = freezed,
     Object? rating = freezed,
     Object? pickup_location = freezed,
@@ -836,6 +839,10 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
               as String?,
       bid_id: freezed == bid_id
           ? _value.bid_id
@@ -883,6 +890,7 @@ abstract class _$$EditPostImplCopyWith<$Res>
       int? languageId,
       String? customThumbnail,
       String? auth,
+      String? status,
       String? bid_id,
       int? rating,
       String? pickup_location,
@@ -913,6 +921,7 @@ class __$$EditPostImplCopyWithImpl<$Res>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? status = freezed,
     Object? bid_id = freezed,
     Object? rating = freezed,
     Object? pickup_location = freezed,
@@ -957,6 +966,10 @@ class __$$EditPostImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       bid_id: freezed == bid_id
           ? _value.bid_id
           : bid_id // ignore: cast_nullable_to_non_nullable
@@ -999,6 +1012,7 @@ class _$EditPostImpl extends _EditPost {
       this.languageId,
       this.customThumbnail,
       this.auth,
+      this.status,
       this.bid_id,
       this.rating,
       this.pickup_location,
@@ -1037,6 +1051,8 @@ class _$EditPostImpl extends _EditPost {
   @override
   final String? auth;
   @override
+  final String? status;
+  @override
   final String? bid_id;
   @override
   final int? rating;
@@ -1051,7 +1067,7 @@ class _$EditPostImpl extends _EditPost {
 
   @override
   String toString() {
-    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
+    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, status: $status, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
   }
 
   @override
@@ -1070,6 +1086,7 @@ class _$EditPostImpl extends _EditPost {
             (identical(other.customThumbnail, customThumbnail) ||
                 other.customThumbnail == customThumbnail) &&
             (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.bid_id, bid_id) || other.bid_id == bid_id) &&
             (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.pickup_location, pickup_location) ||
@@ -1095,6 +1112,7 @@ class _$EditPostImpl extends _EditPost {
       languageId,
       customThumbnail,
       auth,
+      status,
       bid_id,
       rating,
       pickup_location,
@@ -1129,6 +1147,7 @@ abstract class _EditPost extends EditPost {
       final int? languageId,
       final String? customThumbnail,
       final String? auth,
+      final String? status,
       final String? bid_id,
       final int? rating,
       final String? pickup_location,
@@ -1158,6 +1177,8 @@ abstract class _EditPost extends EditPost {
   String? get customThumbnail; // v0.19.4 (optional)
   @override
   String? get auth;
+  @override
+  String? get status;
   @override
   String? get bid_id;
   @override

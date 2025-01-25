@@ -45,6 +45,7 @@ mixin _$Post {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get altText =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get status => throw _privateConstructorUsedError;
   String? get bid_id => throw _privateConstructorUsedError;
   int? get rating => throw _privateConstructorUsedError;
   String? get pickup_location => throw _privateConstructorUsedError;
@@ -90,6 +91,7 @@ abstract class $PostCopyWith<$Res> {
       bool featuredLocal,
       String? urlContentType,
       String? altText,
+      String? status,
       String? bid_id,
       int? rating,
       String? pickup_location,
@@ -136,6 +138,7 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? status = freezed,
     Object? bid_id = freezed,
     Object? rating = freezed,
     Object? pickup_location = freezed,
@@ -236,6 +239,10 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       bid_id: freezed == bid_id
           ? _value.bid_id
           : bid_id // ignore: cast_nullable_to_non_nullable
@@ -295,6 +302,7 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
       bool featuredLocal,
       String? urlContentType,
       String? altText,
+      String? status,
       String? bid_id,
       int? rating,
       String? pickup_location,
@@ -338,6 +346,7 @@ class __$$PostImplCopyWithImpl<$Res>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? status = freezed,
     Object? bid_id = freezed,
     Object? rating = freezed,
     Object? pickup_location = freezed,
@@ -438,6 +447,10 @@ class __$$PostImplCopyWithImpl<$Res>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       bid_id: freezed == bid_id
           ? _value.bid_id
           : bid_id // ignore: cast_nullable_to_non_nullable
@@ -494,6 +507,7 @@ class _$PostImpl extends _Post {
       required this.featuredLocal,
       this.urlContentType,
       this.altText,
+      this.status,
       this.bid_id,
       this.rating,
       this.pickup_location,
@@ -575,6 +589,8 @@ class _$PostImpl extends _Post {
   final String? altText;
 // v0.19.4 (optional)
   @override
+  final String? status;
+  @override
   final String? bid_id;
   @override
   final int? rating;
@@ -589,7 +605,7 @@ class _$PostImpl extends _Post {
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText, status: $status, bid_id: $bid_id, rating: $rating, pickup_location: $pickup_location, pickup_time: $pickup_time, dropoff_location: $dropoff_location, dropoff_time: $dropoff_time)';
   }
 
   @override
@@ -631,6 +647,7 @@ class _$PostImpl extends _Post {
             (identical(other.urlContentType, urlContentType) ||
                 other.urlContentType == urlContentType) &&
             (identical(other.altText, altText) || other.altText == altText) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.bid_id, bid_id) || other.bid_id == bid_id) &&
             (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.pickup_location, pickup_location) ||
@@ -670,6 +687,7 @@ class _$PostImpl extends _Post {
         featuredLocal,
         urlContentType,
         altText,
+        status,
         bid_id,
         rating,
         pickup_location,
@@ -719,6 +737,7 @@ abstract class _Post extends Post {
       required final bool featuredLocal,
       final String? urlContentType,
       final String? altText,
+      final String? status,
       final String? bid_id,
       final int? rating,
       final String? pickup_location,
@@ -775,6 +794,8 @@ abstract class _Post extends Post {
   String? get urlContentType; // v0.19.4 (optional)
   @override
   String? get altText; // v0.19.4 (optional)
+  @override
+  String? get status;
   @override
   String? get bid_id;
   @override
