@@ -96,6 +96,7 @@ class EditPost
     int? languageId, // v0.18.0
     String? customThumbnail, // v0.19.4 (optional)
     String? auth,
+    String? status,
     String? bid_id,
     int? rating,
     String? pickup_location,
