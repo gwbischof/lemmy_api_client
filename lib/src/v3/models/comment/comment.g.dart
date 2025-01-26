@@ -22,6 +22,8 @@ _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
       path: json['path'] as String,
       distinguished: json['distinguished'] as bool,
       languageId: (json['language_id'] as num).toInt(),
+      bid: (json['bid'] as num?)?.toInt(),
+      status: json['status'] as String?,
     );
 
 Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>
@@ -40,6 +42,8 @@ Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>
       'path': instance.path,
       'distinguished': instance.distinguished,
       'language_id': instance.languageId,
+      'bid': instance.bid,
+      'status': instance.status,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

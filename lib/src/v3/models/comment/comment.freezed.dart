@@ -32,7 +32,9 @@ mixin _$Comment {
   bool get local => throw _privateConstructorUsedError; // v0.18.0
   String get path => throw _privateConstructorUsedError; // v0.18.0
   bool get distinguished => throw _privateConstructorUsedError; // v0.18.0
-  int get languageId => throw _privateConstructorUsedError;
+  int get languageId => throw _privateConstructorUsedError; // v0.18.0
+  int? get bid => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// Serializes this Comment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -61,7 +63,9 @@ abstract class $CommentCopyWith<$Res> {
       bool local,
       String path,
       bool distinguished,
-      int languageId});
+      int languageId,
+      int? bid,
+      String? status});
 }
 
 /// @nodoc
@@ -92,6 +96,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     Object? path = null,
     Object? distinguished = null,
     Object? languageId = null,
+    Object? bid = freezed,
+    Object? status = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -146,6 +152,14 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -170,7 +184,9 @@ abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
       bool local,
       String path,
       bool distinguished,
-      int languageId});
+      int languageId,
+      int? bid,
+      String? status});
 }
 
 /// @nodoc
@@ -199,6 +215,8 @@ class __$$CommentImplCopyWithImpl<$Res>
     Object? path = null,
     Object? distinguished = null,
     Object? languageId = null,
+    Object? bid = freezed,
+    Object? status = freezed,
   }) {
     return _then(_$CommentImpl(
       id: null == id
@@ -253,6 +271,14 @@ class __$$CommentImplCopyWithImpl<$Res>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -274,7 +300,9 @@ class _$CommentImpl extends _Comment {
       required this.local,
       required this.path,
       required this.distinguished,
-      required this.languageId})
+      required this.languageId,
+      this.bid,
+      this.status})
       : super._();
 
   factory _$CommentImpl.fromJson(Map<String, dynamic> json) =>
@@ -318,10 +346,15 @@ class _$CommentImpl extends _Comment {
 // v0.18.0
   @override
   final int languageId;
+// v0.18.0
+  @override
+  final int? bid;
+  @override
+  final String? status;
 
   @override
   String toString() {
-    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, content: $content, removed: $removed, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, path: $path, distinguished: $distinguished, languageId: $languageId)';
+    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, content: $content, removed: $removed, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, path: $path, distinguished: $distinguished, languageId: $languageId, bid: $bid, status: $status)';
   }
 
   @override
@@ -345,7 +378,9 @@ class _$CommentImpl extends _Comment {
             (identical(other.distinguished, distinguished) ||
                 other.distinguished == distinguished) &&
             (identical(other.languageId, languageId) ||
-                other.languageId == languageId));
+                other.languageId == languageId) &&
+            (identical(other.bid, bid) || other.bid == bid) &&
+            (identical(other.status, status) || other.status == status));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -364,7 +399,9 @@ class _$CommentImpl extends _Comment {
       local,
       path,
       distinguished,
-      languageId);
+      languageId,
+      bid,
+      status);
 
   /// Create a copy of Comment
   /// with the given fields replaced by the non-null parameter values.
@@ -396,7 +433,9 @@ abstract class _Comment extends Comment {
       required final bool local,
       required final String path,
       required final bool distinguished,
-      required final int languageId}) = _$CommentImpl;
+      required final int languageId,
+      final int? bid,
+      final String? status}) = _$CommentImpl;
   const _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$CommentImpl.fromJson;
@@ -426,7 +465,11 @@ abstract class _Comment extends Comment {
   @override
   bool get distinguished; // v0.18.0
   @override
-  int get languageId;
+  int get languageId; // v0.18.0
+  @override
+  int? get bid;
+  @override
+  String? get status;
 
   /// Create a copy of Comment
   /// with the given fields replaced by the non-null parameter values.

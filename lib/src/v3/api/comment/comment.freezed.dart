@@ -27,6 +27,8 @@ mixin _$CreateComment {
   @deprecated
   String? get formId =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int? get bid => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreateComment to a JSON map.
@@ -51,6 +53,8 @@ abstract class $CreateCommentCopyWith<$Res> {
       int? parentId,
       int? languageId,
       @deprecated String? formId,
+      int? bid,
+      String? status,
       String? auth});
 }
 
@@ -74,6 +78,8 @@ class _$CreateCommentCopyWithImpl<$Res, $Val extends CreateComment>
     Object? parentId = freezed,
     Object? languageId = freezed,
     Object? formId = freezed,
+    Object? bid = freezed,
+    Object? status = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -97,6 +103,14 @@ class _$CreateCommentCopyWithImpl<$Res, $Val extends CreateComment>
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -119,6 +133,8 @@ abstract class _$$CreateCommentImplCopyWith<$Res>
       int? parentId,
       int? languageId,
       @deprecated String? formId,
+      int? bid,
+      String? status,
       String? auth});
 }
 
@@ -140,6 +156,8 @@ class __$$CreateCommentImplCopyWithImpl<$Res>
     Object? parentId = freezed,
     Object? languageId = freezed,
     Object? formId = freezed,
+    Object? bid = freezed,
+    Object? status = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$CreateCommentImpl(
@@ -163,6 +181,14 @@ class __$$CreateCommentImplCopyWithImpl<$Res>
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -181,6 +207,8 @@ class _$CreateCommentImpl extends _CreateComment {
       this.parentId,
       this.languageId,
       @deprecated this.formId,
+      this.bid,
+      this.status,
       this.auth})
       : super._();
 
@@ -204,11 +232,15 @@ class _$CreateCommentImpl extends _CreateComment {
   final String? formId;
 // v0.18.0 [deprecated in v0.19.0]
   @override
+  final int? bid;
+  @override
+  final String? status;
+  @override
   final String? auth;
 
   @override
   String toString() {
-    return 'CreateComment(content: $content, postId: $postId, parentId: $parentId, languageId: $languageId, formId: $formId, auth: $auth)';
+    return 'CreateComment(content: $content, postId: $postId, parentId: $parentId, languageId: $languageId, formId: $formId, bid: $bid, status: $status, auth: $auth)';
   }
 
   @override
@@ -223,13 +255,15 @@ class _$CreateCommentImpl extends _CreateComment {
             (identical(other.languageId, languageId) ||
                 other.languageId == languageId) &&
             (identical(other.formId, formId) || other.formId == formId) &&
+            (identical(other.bid, bid) || other.bid == bid) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, content, postId, parentId, languageId, formId, auth);
+  int get hashCode => Object.hash(runtimeType, content, postId, parentId,
+      languageId, formId, bid, status, auth);
 
   /// Create a copy of CreateComment
   /// with the given fields replaced by the non-null parameter values.
@@ -254,6 +288,8 @@ abstract class _CreateComment extends CreateComment {
       final int? parentId,
       final int? languageId,
       @deprecated final String? formId,
+      final int? bid,
+      final String? status,
       final String? auth}) = _$CreateCommentImpl;
   const _CreateComment._() : super._();
 
@@ -271,6 +307,10 @@ abstract class _CreateComment extends CreateComment {
   @override
   @deprecated
   String? get formId; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int? get bid;
+  @override
+  String? get status;
   @override
   String? get auth;
 
@@ -294,6 +334,8 @@ mixin _$EditComment {
   @deprecated
   String? get formId =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int? get bid => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this EditComment to a JSON map.
@@ -317,6 +359,8 @@ abstract class $EditCommentCopyWith<$Res> {
       String? content,
       int? languageId,
       @deprecated String? formId,
+      int? bid,
+      String? status,
       String? auth});
 }
 
@@ -339,6 +383,8 @@ class _$EditCommentCopyWithImpl<$Res, $Val extends EditComment>
     Object? content = freezed,
     Object? languageId = freezed,
     Object? formId = freezed,
+    Object? bid = freezed,
+    Object? status = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -357,6 +403,14 @@ class _$EditCommentCopyWithImpl<$Res, $Val extends EditComment>
       formId: freezed == formId
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
               as String?,
       auth: freezed == auth
           ? _value.auth
@@ -379,6 +433,8 @@ abstract class _$$EditCommentImplCopyWith<$Res>
       String? content,
       int? languageId,
       @deprecated String? formId,
+      int? bid,
+      String? status,
       String? auth});
 }
 
@@ -399,6 +455,8 @@ class __$$EditCommentImplCopyWithImpl<$Res>
     Object? content = freezed,
     Object? languageId = freezed,
     Object? formId = freezed,
+    Object? bid = freezed,
+    Object? status = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$EditCommentImpl(
@@ -418,6 +476,14 @@ class __$$EditCommentImplCopyWithImpl<$Res>
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -435,6 +501,8 @@ class _$EditCommentImpl extends _EditComment {
       this.content,
       this.languageId,
       @deprecated this.formId,
+      this.bid,
+      this.status,
       this.auth})
       : super._();
 
@@ -455,11 +523,15 @@ class _$EditCommentImpl extends _EditComment {
   final String? formId;
 // v0.18.0 [deprecated in v0.19.0]
   @override
+  final int? bid;
+  @override
+  final String? status;
+  @override
   final String? auth;
 
   @override
   String toString() {
-    return 'EditComment(commentId: $commentId, content: $content, languageId: $languageId, formId: $formId, auth: $auth)';
+    return 'EditComment(commentId: $commentId, content: $content, languageId: $languageId, formId: $formId, bid: $bid, status: $status, auth: $auth)';
   }
 
   @override
@@ -473,13 +545,15 @@ class _$EditCommentImpl extends _EditComment {
             (identical(other.languageId, languageId) ||
                 other.languageId == languageId) &&
             (identical(other.formId, formId) || other.formId == formId) &&
+            (identical(other.bid, bid) || other.bid == bid) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, commentId, content, languageId, formId, auth);
+  int get hashCode => Object.hash(
+      runtimeType, commentId, content, languageId, formId, bid, status, auth);
 
   /// Create a copy of EditComment
   /// with the given fields replaced by the non-null parameter values.
@@ -503,6 +577,8 @@ abstract class _EditComment extends EditComment {
       final String? content,
       final int? languageId,
       @deprecated final String? formId,
+      final int? bid,
+      final String? status,
       final String? auth}) = _$EditCommentImpl;
   const _EditComment._() : super._();
 
@@ -518,6 +594,10 @@ abstract class _EditComment extends EditComment {
   @override
   @deprecated
   String? get formId; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int? get bid;
+  @override
+  String? get status;
   @override
   String? get auth;
 
