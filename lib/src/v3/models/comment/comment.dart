@@ -23,6 +23,8 @@ class Comment with _$Comment {
     required String path, // v0.18.0
     required bool distinguished, // v0.18.0
     required int languageId, // v0.18.0
+    int? bid,
+    String? status,
   }) = _Comment;
 
   const Comment._();

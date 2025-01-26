@@ -22,6 +22,8 @@ class CreateComment
     int? parentId, // v0.18.0
     int? languageId, // v0.18.0
     @deprecated String? formId, // v0.18.0 [deprecated in v0.19.0]
+    int? bid,
+    String? status,
     String? auth,
   }) = _CreateComment;
 
@@ -51,6 +53,8 @@ class EditComment
     String? content, // v0.18.0
     int? languageId, // v0.18.0
     @deprecated String? formId, // v0.18.0 [deprecated in v0.19.0]
+    int? bid,
+    String? status,
     String? auth,
   }) = _EditComment;
 

@@ -13,6 +13,8 @@ _$CreateCommentImpl _$$CreateCommentImplFromJson(Map<String, dynamic> json) =>
       parentId: (json['parent_id'] as num?)?.toInt(),
       languageId: (json['language_id'] as num?)?.toInt(),
       formId: json['form_id'] as String?,
+      bid: (json['bid'] as num?)?.toInt(),
+      status: json['status'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -23,6 +25,8 @@ Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) =>
       if (instance.parentId case final value?) 'parent_id': value,
       if (instance.languageId case final value?) 'language_id': value,
       if (instance.formId case final value?) 'form_id': value,
+      if (instance.bid case final value?) 'bid': value,
+      if (instance.status case final value?) 'status': value,
       if (instance.auth case final value?) 'auth': value,
     };
 
@@ -32,6 +36,8 @@ _$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
       content: json['content'] as String?,
       languageId: (json['language_id'] as num?)?.toInt(),
       formId: json['form_id'] as String?,
+      bid: (json['bid'] as num?)?.toInt(),
+      status: json['status'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -41,6 +47,8 @@ Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) =>
       if (instance.content case final value?) 'content': value,
       if (instance.languageId case final value?) 'language_id': value,
       if (instance.formId case final value?) 'form_id': value,
+      if (instance.bid case final value?) 'bid': value,
+      if (instance.status case final value?) 'status': value,
       if (instance.auth case final value?) 'auth': value,
     };
 
