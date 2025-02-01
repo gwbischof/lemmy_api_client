@@ -17,20 +17,11 @@ _$AuthenticateWithOAuthImpl _$$AuthenticateWithOAuthImplFromJson(
     );
 
 Map<String, dynamic> _$$AuthenticateWithOAuthImplToJson(
-    _$AuthenticateWithOAuthImpl instance) {
-  final val = <String, dynamic>{
-    'code': instance.code,
-    'oauth_provider_id': instance.oauth_provider_id,
-    'redirect_uri': instance.redirect_uri,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('username', instance.username);
-  writeNotNull('answer', instance.answer);
-  return val;
-}
+        _$AuthenticateWithOAuthImpl instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'oauth_provider_id': instance.oauth_provider_id,
+      'redirect_uri': instance.redirect_uri,
+      if (instance.username case final value?) 'username': value,
+      if (instance.answer case final value?) 'answer': value,
+    };
