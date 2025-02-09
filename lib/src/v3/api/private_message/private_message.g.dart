@@ -10,9 +10,9 @@ _$GetPrivateMessagesImpl _$$GetPrivateMessagesImplFromJson(
         Map<String, dynamic> json) =>
     _$GetPrivateMessagesImpl(
       unreadOnly: json['unread_only'] as bool?,
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      creatorId: (json['creator_id'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      creatorId: json['creator_id'] as int?,
       auth: json['auth'] as String?,
     );
 
@@ -38,7 +38,7 @@ _$CreatePrivateMessageImpl _$$CreatePrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
     _$CreatePrivateMessageImpl(
       content: json['content'] as String,
-      recipientId: (json['recipient_id'] as num).toInt(),
+      recipientId: json['recipient_id'] as int,
       auth: json['auth'] as String?,
     );
 
@@ -62,7 +62,7 @@ Map<String, dynamic> _$$CreatePrivateMessageImplToJson(
 _$EditPrivateMessageImpl _$$EditPrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
     _$EditPrivateMessageImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
+      privateMessageId: json['private_message_id'] as int,
       content: json['content'] as String,
       auth: json['auth'] as String?,
     );
@@ -87,7 +87,7 @@ Map<String, dynamic> _$$EditPrivateMessageImplToJson(
 _$DeletePrivateMessageImpl _$$DeletePrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
     _$DeletePrivateMessageImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
+      privateMessageId: json['private_message_id'] as int,
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
@@ -112,7 +112,7 @@ Map<String, dynamic> _$$DeletePrivateMessageImplToJson(
 _$MarkPrivateMessageAsReadImpl _$$MarkPrivateMessageAsReadImplFromJson(
         Map<String, dynamic> json) =>
     _$MarkPrivateMessageAsReadImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
+      privateMessageId: json['private_message_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
@@ -137,7 +137,7 @@ Map<String, dynamic> _$$MarkPrivateMessageAsReadImplToJson(
 _$CreatePrivateMessageReportImpl _$$CreatePrivateMessageReportImplFromJson(
         Map<String, dynamic> json) =>
     _$CreatePrivateMessageReportImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
+      privateMessageId: json['private_message_id'] as int,
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
@@ -162,7 +162,7 @@ Map<String, dynamic> _$$CreatePrivateMessageReportImplToJson(
 _$ResolvePrivateMessageReportImpl _$$ResolvePrivateMessageReportImplFromJson(
         Map<String, dynamic> json) =>
     _$ResolvePrivateMessageReportImpl(
-      reportId: (json['report_id'] as num).toInt(),
+      reportId: json['report_id'] as int,
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
@@ -187,10 +187,10 @@ Map<String, dynamic> _$$ResolvePrivateMessageReportImplToJson(
 _$ListPrivateMessageReportsImpl _$$ListPrivateMessageReportsImplFromJson(
         Map<String, dynamic> json) =>
     _$ListPrivateMessageReportsImpl(
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
-      communityId: (json['community_id'] as num?)?.toInt(),
+      communityId: json['community_id'] as int?,
       auth: json['auth'] as String?,
     );
 

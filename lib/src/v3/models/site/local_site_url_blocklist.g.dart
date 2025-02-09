@@ -9,7 +9,7 @@ part of 'local_site_url_blocklist.dart';
 _$LocalSiteUrlBlocklistImpl _$$LocalSiteUrlBlocklistImplFromJson(
         Map<String, dynamic> json) =>
     _$LocalSiteUrlBlocklistImpl(
-      id: (json['id'] as num?)?.toInt(),
+      id: json['id'] as int?,
       url: json['url'] as String?,
       published: _$JsonConverterFromJson<String, DateTime>(
           json['published'], const ForceUtcDateTime().fromJson),

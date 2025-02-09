@@ -19,7 +19,7 @@ _$GetCommunityResponseImpl _$$GetCommunityResponseImplFromJson(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
           .toList(),
       discussionLanguages: (json['discussion_languages'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
+          .map((e) => e as int)
           .toList(),
     );
 

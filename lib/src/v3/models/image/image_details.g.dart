@@ -9,8 +9,8 @@ part of 'image_details.dart';
 _$ImageDetailsImpl _$$ImageDetailsImplFromJson(Map<String, dynamic> json) =>
     _$ImageDetailsImpl(
       link: json['link'] as String,
-      width: (json['width'] as num).toInt(),
-      height: (json['height'] as num).toInt(),
+      width: json['width'] as int,
+      height: json['height'] as int,
       contentType: json['content_type'] as String,
     );
 

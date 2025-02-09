@@ -9,9 +9,9 @@ part of 'mod_remove_community.dart';
 _$ModRemoveCommunityImpl _$$ModRemoveCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$ModRemoveCommunityImpl(
-      id: (json['id'] as num).toInt(),
-      modPersonId: (json['mod_person_id'] as num).toInt(),
-      communityId: (json['community_id'] as num).toInt(),
+      id: json['id'] as int,
+      modPersonId: json['mod_person_id'] as int,
+      communityId: json['community_id'] as int,
       reason: json['reason'] as String?,
       removed: json['removed'] as bool,
       expires: json['expires'] as String?,

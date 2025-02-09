@@ -21,7 +21,7 @@ _$CommentViewImpl _$$CommentViewImplFromJson(Map<String, dynamic> json) =>
       subscribed: SubscribedType.fromJson(json['subscribed'] as String),
       saved: json['saved'] as bool,
       creatorBlocked: json['creator_blocked'] as bool,
-      myVote: (json['my_vote'] as num?)?.toInt(),
+      myVote: json['my_vote'] as int?,
     );
 
 Map<String, dynamic> _$$CommentViewImplToJson(_$CommentViewImpl instance) =>

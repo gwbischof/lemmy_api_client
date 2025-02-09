@@ -12,7 +12,7 @@ _$CommentResponseImpl _$$CommentResponseImplFromJson(
       commentView:
           CommentView.fromJson(json['comment_view'] as Map<String, dynamic>),
       recipientIds: (json['recipient_ids'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
+          .map((e) => e as int)
           .toList(),
       formId: json['form_id'] as String?,
     );

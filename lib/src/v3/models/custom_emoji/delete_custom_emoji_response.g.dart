@@ -9,7 +9,7 @@ part of 'delete_custom_emoji_response.dart';
 _$DeleteCustomEmojiResponseImpl _$$DeleteCustomEmojiResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$DeleteCustomEmojiResponseImpl(
-      id: (json['id'] as num?)?.toInt(),
+      id: json['id'] as int?,
       success: json['success'] as bool,
     );
 

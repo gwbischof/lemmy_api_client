@@ -9,10 +9,10 @@ part of 'registration_application.dart';
 _$RegistrationApplicationImpl _$$RegistrationApplicationImplFromJson(
         Map<String, dynamic> json) =>
     _$RegistrationApplicationImpl(
-      id: (json['id'] as num).toInt(),
-      localUserId: (json['local_user_id'] as num).toInt(),
+      id: json['id'] as int,
+      localUserId: json['local_user_id'] as int,
       answer: json['answer'] as String,
-      adminId: (json['admin_id'] as num?)?.toInt(),
+      adminId: json['admin_id'] as int?,
       denyReason: json['deny_reason'] as String?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
     );

@@ -26,8 +26,8 @@ Map<String, dynamic> _$$LeaveAdminImplToJson(_$LeaveAdminImpl instance) {
 
 _$ListMediaImpl _$$ListMediaImplFromJson(Map<String, dynamic> json) =>
     _$ListMediaImpl(
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
       auth: json['auth'] as String?,
     );
 
@@ -211,12 +211,12 @@ Map<String, dynamic> _$$LogoutImplToJson(_$LogoutImpl instance) =>
 _$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(
         Map<String, dynamic> json) =>
     _$GetPersonDetailsImpl(
-      personId: (json['person_id'] as num?)?.toInt(),
+      personId: json['person_id'] as int?,
       username: json['username'] as String?,
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      communityId: (json['community_id'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      communityId: json['community_id'] as int?,
       savedOnly: json['saved_only'] as bool?,
       auth: json['auth'] as String?,
     );
@@ -247,8 +247,8 @@ _$GetPersonMentionsImpl _$$GetPersonMentionsImplFromJson(
     _$GetPersonMentionsImpl(
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
       unreadOnly: json['unread_only'] as bool?,
       auth: json['auth'] as String?,
     );
@@ -274,7 +274,7 @@ Map<String, dynamic> _$$GetPersonMentionsImplToJson(
 _$MarkPersonMentionAsReadImpl _$$MarkPersonMentionAsReadImplFromJson(
         Map<String, dynamic> json) =>
     _$MarkPersonMentionAsReadImpl(
-      personMentionId: (json['person_mention_id'] as num).toInt(),
+      personMentionId: json['person_mention_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
@@ -300,8 +300,8 @@ _$GetRepliesImpl _$$GetRepliesImplFromJson(Map<String, dynamic> json) =>
     _$GetRepliesImpl(
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
       unreadOnly: json['unread_only'] as bool?,
       auth: json['auth'] as String?,
     );
@@ -325,11 +325,11 @@ Map<String, dynamic> _$$GetRepliesImplToJson(_$GetRepliesImpl instance) {
 
 _$BanPersonImpl _$$BanPersonImplFromJson(Map<String, dynamic> json) =>
     _$BanPersonImpl(
-      personId: (json['person_id'] as num).toInt(),
+      personId: json['person_id'] as int,
       ban: json['ban'] as bool,
       removeData: json['remove_data'] as bool?,
       reason: json['reason'] as String?,
-      expires: (json['expires'] as num?)?.toInt(),
+      expires: json['expires'] as int?,
       auth: json['auth'] as String?,
     );
 
@@ -374,7 +374,7 @@ Map<String, dynamic> _$$GetBannedPersonsImplToJson(
 
 _$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) =>
     _$BlockPersonImpl(
-      personId: (json['person_id'] as num).toInt(),
+      personId: json['person_id'] as int,
       block: json['block'] as bool,
       auth: json['auth'] as String?,
     );
@@ -507,7 +507,7 @@ _$SaveUserSettingsImpl _$$SaveUserSettingsImplFromJson(
       showReadPosts: json['show_read_posts'] as bool?,
       showNewPostNotifs: json['show_new_post_notifs'] as bool?,
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => (e as num).toInt())
+          ?.map((e) => e as int)
           .toList(),
       generateTotp2fa: json['generate_totp2fa'] as bool?,
       auth: json['auth'] as String?,
@@ -597,7 +597,7 @@ Map<String, dynamic> _$$ChangePasswordImplToJson(
 
 _$GetReportCountImpl _$$GetReportCountImplFromJson(Map<String, dynamic> json) =>
     _$GetReportCountImpl(
-      communityId: (json['community_id'] as num?)?.toInt(),
+      communityId: json['community_id'] as int?,
       auth: json['auth'] as String?,
     );
 

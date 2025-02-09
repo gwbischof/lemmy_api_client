@@ -28,8 +28,8 @@ mixin _$GetSiteResponse {
       throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages =>
       throw _privateConstructorUsedError; // v0.18.0
-  List<Tagline> get taglines => throw _privateConstructorUsedError; // v0.18.0
-  List<CustomEmojiView> get customEmojis =>
+  List<Tagline>? get taglines => throw _privateConstructorUsedError; // v0.18.0
+  List<CustomEmojiView>? get customEmojis =>
       throw _privateConstructorUsedError; // v0.18.0
   List<ProviderView>? get oauthProviders =>
       throw _privateConstructorUsedError; // v0.20.0
@@ -59,8 +59,8 @@ abstract class $GetSiteResponseCopyWith<$Res> {
       MyUserInfo? myUser,
       List<Language> allLanguages,
       List<int> discussionLanguages,
-      List<Tagline> taglines,
-      List<CustomEmojiView> customEmojis,
+      List<Tagline>? taglines,
+      List<CustomEmojiView>? customEmojis,
       List<ProviderView>? oauthProviders,
       List<LocalSiteUrlBlocklist>? blockedUrls});
 
@@ -89,8 +89,8 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
     Object? myUser = freezed,
     Object? allLanguages = null,
     Object? discussionLanguages = null,
-    Object? taglines = null,
-    Object? customEmojis = null,
+    Object? taglines = freezed,
+    Object? customEmojis = freezed,
     Object? oauthProviders = freezed,
     Object? blockedUrls = freezed,
   }) {
@@ -119,14 +119,14 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
           ? _value.discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      taglines: null == taglines
+      taglines: freezed == taglines
           ? _value.taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>,
-      customEmojis: null == customEmojis
+              as List<Tagline>?,
+      customEmojis: freezed == customEmojis
           ? _value.customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmojiView>,
+              as List<CustomEmojiView>?,
       oauthProviders: freezed == oauthProviders
           ? _value.oauthProviders
           : oauthProviders // ignore: cast_nullable_to_non_nullable
@@ -178,8 +178,8 @@ abstract class _$$GetSiteResponseImplCopyWith<$Res>
       MyUserInfo? myUser,
       List<Language> allLanguages,
       List<int> discussionLanguages,
-      List<Tagline> taglines,
-      List<CustomEmojiView> customEmojis,
+      List<Tagline>? taglines,
+      List<CustomEmojiView>? customEmojis,
       List<ProviderView>? oauthProviders,
       List<LocalSiteUrlBlocklist>? blockedUrls});
 
@@ -208,8 +208,8 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
     Object? myUser = freezed,
     Object? allLanguages = null,
     Object? discussionLanguages = null,
-    Object? taglines = null,
-    Object? customEmojis = null,
+    Object? taglines = freezed,
+    Object? customEmojis = freezed,
     Object? oauthProviders = freezed,
     Object? blockedUrls = freezed,
   }) {
@@ -238,14 +238,14 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
           ? _value._discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      taglines: null == taglines
+      taglines: freezed == taglines
           ? _value._taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>,
-      customEmojis: null == customEmojis
+              as List<Tagline>?,
+      customEmojis: freezed == customEmojis
           ? _value._customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmojiView>,
+              as List<CustomEmojiView>?,
       oauthProviders: freezed == oauthProviders
           ? _value._oauthProviders
           : oauthProviders // ignore: cast_nullable_to_non_nullable
@@ -269,8 +269,8 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       this.myUser,
       required final List<Language> allLanguages,
       required final List<int> discussionLanguages,
-      required final List<Tagline> taglines,
-      required final List<CustomEmojiView> customEmojis,
+      final List<Tagline>? taglines,
+      final List<CustomEmojiView>? customEmojis,
       final List<ProviderView>? oauthProviders,
       final List<LocalSiteUrlBlocklist>? blockedUrls})
       : _admins = admins,
@@ -325,23 +325,27 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
   }
 
 // v0.18.0
-  final List<Tagline> _taglines;
+  final List<Tagline>? _taglines;
 // v0.18.0
   @override
-  List<Tagline> get taglines {
+  List<Tagline>? get taglines {
+    final value = _taglines;
+    if (value == null) return null;
     if (_taglines is EqualUnmodifiableListView) return _taglines;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_taglines);
+    return EqualUnmodifiableListView(value);
   }
 
 // v0.18.0
-  final List<CustomEmojiView> _customEmojis;
+  final List<CustomEmojiView>? _customEmojis;
 // v0.18.0
   @override
-  List<CustomEmojiView> get customEmojis {
+  List<CustomEmojiView>? get customEmojis {
+    final value = _customEmojis;
+    if (value == null) return null;
     if (_customEmojis is EqualUnmodifiableListView) return _customEmojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_customEmojis);
+    return EqualUnmodifiableListView(value);
   }
 
 // v0.18.0
@@ -436,8 +440,8 @@ abstract class _GetSiteResponse extends GetSiteResponse {
       final MyUserInfo? myUser,
       required final List<Language> allLanguages,
       required final List<int> discussionLanguages,
-      required final List<Tagline> taglines,
-      required final List<CustomEmojiView> customEmojis,
+      final List<Tagline>? taglines,
+      final List<CustomEmojiView>? customEmojis,
       final List<ProviderView>? oauthProviders,
       final List<LocalSiteUrlBlocklist>? blockedUrls}) = _$GetSiteResponseImpl;
   const _GetSiteResponse._() : super._();
@@ -458,9 +462,9 @@ abstract class _GetSiteResponse extends GetSiteResponse {
   @override
   List<int> get discussionLanguages; // v0.18.0
   @override
-  List<Tagline> get taglines; // v0.18.0
+  List<Tagline>? get taglines; // v0.18.0
   @override
-  List<CustomEmojiView> get customEmojis; // v0.18.0
+  List<CustomEmojiView>? get customEmojis; // v0.18.0
   @override
   List<ProviderView>? get oauthProviders; // v0.20.0
   @override

@@ -8,9 +8,9 @@ part of 'comment.dart';
 
 _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
     _$CommentImpl(
-      id: (json['id'] as num).toInt(),
-      creatorId: (json['creator_id'] as num).toInt(),
-      postId: (json['post_id'] as num).toInt(),
+      id: json['id'] as int,
+      creatorId: json['creator_id'] as int,
+      postId: json['post_id'] as int,
       content: json['content'] as String,
       removed: json['removed'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -21,7 +21,7 @@ _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
       local: json['local'] as bool,
       path: json['path'] as String,
       distinguished: json['distinguished'] as bool,
-      languageId: (json['language_id'] as num).toInt(),
+      languageId: json['language_id'] as int,
     );
 
 Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>

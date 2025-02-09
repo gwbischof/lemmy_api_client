@@ -11,7 +11,7 @@ class SiteResponse with _$SiteResponse {
   @modelSerde
   const factory SiteResponse({
     required SiteView siteView, // v0.18.0
-    required List<Tagline> taglines, // v0.18.0
+    List<Tagline>? taglines, // v0.18.0
   }) = _SiteResponse;
 
   const SiteResponse._();

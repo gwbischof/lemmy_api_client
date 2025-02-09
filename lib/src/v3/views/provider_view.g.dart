@@ -8,7 +8,7 @@ part of 'provider_view.dart';
 
 _$ProviderViewImpl _$$ProviderViewImplFromJson(Map<String, dynamic> json) =>
     _$ProviderViewImpl(
-      id: (json['id'] as num).toInt(),
+      id: json['id'] as int,
       displayName: json['display_name'] as String,
       authorizationEndpoint: json['authorization_endpoint'] as String,
       clientId: json['client_id'] as String,

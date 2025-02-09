@@ -21,7 +21,7 @@ SiteResponse _$SiteResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SiteResponse {
   SiteView get siteView => throw _privateConstructorUsedError; // v0.18.0
-  List<Tagline> get taglines => throw _privateConstructorUsedError;
+  List<Tagline>? get taglines => throw _privateConstructorUsedError;
 
   /// Serializes this SiteResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $SiteResponseCopyWith<$Res> {
           SiteResponse value, $Res Function(SiteResponse) then) =
       _$SiteResponseCopyWithImpl<$Res, SiteResponse>;
   @useResult
-  $Res call({SiteView siteView, List<Tagline> taglines});
+  $Res call({SiteView siteView, List<Tagline>? taglines});
 
   $SiteViewCopyWith<$Res> get siteView;
 }
@@ -60,17 +60,17 @@ class _$SiteResponseCopyWithImpl<$Res, $Val extends SiteResponse>
   @override
   $Res call({
     Object? siteView = null,
-    Object? taglines = null,
+    Object? taglines = freezed,
   }) {
     return _then(_value.copyWith(
       siteView: null == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
               as SiteView,
-      taglines: null == taglines
+      taglines: freezed == taglines
           ? _value.taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>,
+              as List<Tagline>?,
     ) as $Val);
   }
 
@@ -93,7 +93,7 @@ abstract class _$$SiteResponseImplCopyWith<$Res>
       __$$SiteResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({SiteView siteView, List<Tagline> taglines});
+  $Res call({SiteView siteView, List<Tagline>? taglines});
 
   @override
   $SiteViewCopyWith<$Res> get siteView;
@@ -113,17 +113,17 @@ class __$$SiteResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? siteView = null,
-    Object? taglines = null,
+    Object? taglines = freezed,
   }) {
     return _then(_$SiteResponseImpl(
       siteView: null == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
               as SiteView,
-      taglines: null == taglines
+      taglines: freezed == taglines
           ? _value._taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>,
+              as List<Tagline>?,
     ));
   }
 }
@@ -133,7 +133,7 @@ class __$$SiteResponseImplCopyWithImpl<$Res>
 @modelSerde
 class _$SiteResponseImpl extends _SiteResponse {
   const _$SiteResponseImpl(
-      {required this.siteView, required final List<Tagline> taglines})
+      {required this.siteView, final List<Tagline>? taglines})
       : _taglines = taglines,
         super._();
 
@@ -143,13 +143,15 @@ class _$SiteResponseImpl extends _SiteResponse {
   @override
   final SiteView siteView;
 // v0.18.0
-  final List<Tagline> _taglines;
+  final List<Tagline>? _taglines;
 // v0.18.0
   @override
-  List<Tagline> get taglines {
+  List<Tagline>? get taglines {
+    final value = _taglines;
+    if (value == null) return null;
     if (_taglines is EqualUnmodifiableListView) return _taglines;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_taglines);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -191,7 +193,7 @@ class _$SiteResponseImpl extends _SiteResponse {
 abstract class _SiteResponse extends SiteResponse {
   const factory _SiteResponse(
       {required final SiteView siteView,
-      required final List<Tagline> taglines}) = _$SiteResponseImpl;
+      final List<Tagline>? taglines}) = _$SiteResponseImpl;
   const _SiteResponse._() : super._();
 
   factory _SiteResponse.fromJson(Map<String, dynamic> json) =
@@ -200,7 +202,7 @@ abstract class _SiteResponse extends SiteResponse {
   @override
   SiteView get siteView; // v0.18.0
   @override
-  List<Tagline> get taglines;
+  List<Tagline>? get taglines;
 
   /// Create a copy of SiteResponse
   /// with the given fields replaced by the non-null parameter values.

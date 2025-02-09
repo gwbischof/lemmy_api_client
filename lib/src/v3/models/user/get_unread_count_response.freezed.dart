@@ -21,7 +21,7 @@ GetUnreadCountResponse _$GetUnreadCountResponseFromJson(
 
 /// @nodoc
 mixin _$GetUnreadCountResponse {
-  int get replies => throw _privateConstructorUsedError; // v0.18.0
+  int? get replies => throw _privateConstructorUsedError; // v0.18.0
   int get mentions => throw _privateConstructorUsedError; // v0.18.0
   int get privateMessages => throw _privateConstructorUsedError;
 
@@ -41,7 +41,7 @@ abstract class $GetUnreadCountResponseCopyWith<$Res> {
           $Res Function(GetUnreadCountResponse) then) =
       _$GetUnreadCountResponseCopyWithImpl<$Res, GetUnreadCountResponse>;
   @useResult
-  $Res call({int replies, int mentions, int privateMessages});
+  $Res call({int? replies, int mentions, int privateMessages});
 }
 
 /// @nodoc
@@ -60,15 +60,15 @@ class _$GetUnreadCountResponseCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? replies = null,
+    Object? replies = freezed,
     Object? mentions = null,
     Object? privateMessages = null,
   }) {
     return _then(_value.copyWith(
-      replies: null == replies
+      replies: freezed == replies
           ? _value.replies
           : replies // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       mentions: null == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
@@ -90,7 +90,7 @@ abstract class _$$GetUnreadCountResponseImplCopyWith<$Res>
       __$$GetUnreadCountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int replies, int mentions, int privateMessages});
+  $Res call({int? replies, int mentions, int privateMessages});
 }
 
 /// @nodoc
@@ -108,15 +108,15 @@ class __$$GetUnreadCountResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? replies = null,
+    Object? replies = freezed,
     Object? mentions = null,
     Object? privateMessages = null,
   }) {
     return _then(_$GetUnreadCountResponseImpl(
-      replies: null == replies
+      replies: freezed == replies
           ? _value.replies
           : replies // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       mentions: null == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
@@ -134,16 +134,14 @@ class __$$GetUnreadCountResponseImplCopyWithImpl<$Res>
 @modelSerde
 class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
   const _$GetUnreadCountResponseImpl(
-      {required this.replies,
-      required this.mentions,
-      required this.privateMessages})
+      {this.replies, required this.mentions, required this.privateMessages})
       : super._();
 
   factory _$GetUnreadCountResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetUnreadCountResponseImplFromJson(json);
 
   @override
-  final int replies;
+  final int? replies;
 // v0.18.0
   @override
   final int mentions;
@@ -192,7 +190,7 @@ class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
 
 abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
   const factory _GetUnreadCountResponse(
-      {required final int replies,
+      {final int? replies,
       required final int mentions,
       required final int privateMessages}) = _$GetUnreadCountResponseImpl;
   const _GetUnreadCountResponse._() : super._();
@@ -201,7 +199,7 @@ abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
       _$GetUnreadCountResponseImpl.fromJson;
 
   @override
-  int get replies; // v0.18.0
+  int? get replies; // v0.18.0
   @override
   int get mentions; // v0.18.0
   @override
