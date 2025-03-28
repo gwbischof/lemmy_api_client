@@ -9,4 +9,4 @@ pubspec.lock
 # Contains credentials for tests
 test/config.dart
 
-.devcontainer/volumes/
+docker/volumes/
