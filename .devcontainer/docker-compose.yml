@@ -5,6 +5,9 @@ x-logging: &default-logging
     max-file: "4"
 
 services:
+
+  dart:
+    image: dart:3.7.2
   proxy:
     image: nginx:1-alpine
     ports:
